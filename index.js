@@ -35,13 +35,6 @@ let reminders = [
   }
 ]
 
-const baseUrl = '/api/reminders'
-
-const getAll = () => {
-  const request = axios.get(baseUrl)
-  return request.then(response => response.data)
-}
-
 app.get('/api/reminders', (request, response) => {
   response.json(reminders)
 })
