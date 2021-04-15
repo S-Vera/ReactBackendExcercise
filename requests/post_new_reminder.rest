@@ -1,0 +1,8 @@
+POST http://localhost:3001/api/reminders/
+content-type:application/json
+
+{
+    "name":"Tee web ja mobiili tehtävät valmiiksi",
+    "timestamp":"2021-4-15T23:00:00.141Z",
+    "id":0
+}
