@@ -1,2 +1,2 @@
 
-GET https://murmuring-anchorage-49468.herokuapp.com/api/reminders
+GET http://localhost:3001/api/reminders
