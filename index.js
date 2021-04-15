@@ -1,12 +1,15 @@
 const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
+import axios from 'axios'
+
 
 const cors = require('cors')
 
 app.use(cors())
 
 app.use(bodyParser.json())
+app.use(express.static('build'))
 
 let reminders = [
   {
@@ -31,6 +34,13 @@ let reminders = [
     "id": 4
   }
 ]
+
+const baseUrl = '/api/reminders'
+
+const getAll = () => {
+  const request = axios.get(baseUrl)
+  return request.then(response => response.data)
+}
 
 app.get('/api/reminders', (request, response) => {
   response.json(reminders)
