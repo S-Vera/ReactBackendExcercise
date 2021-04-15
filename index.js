@@ -2,29 +2,33 @@ const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
 
+const cors = require('cors')
+
+app.use(cors())
+
 app.use(bodyParser.json())
 
 let reminders = [
   {
     
-    name: "Buy some eggs",
-    timestamp: "2021-11-10T13:00:00.141Z",
-    id: 1
+    "name": "Buy some eggs",
+    "timestamp": "2021-11-10T13:00:00.141Z",
+    "id": 1
   },
   {
-    name: "Make an omelette",
-    timestamp: "2021-11-11:T08:00:00.141Z",
-    id: 2
+    "name": "Make an omelette",
+    "timestamp": "2021-11-11T08:00:00.141Z",
+    "id": 2
   },
   {
-    name: "Wash dishes",
-    timestamp: "2021-11-11T09:00:00.141Z",
-    id: 3
+    "name": "Wash dishes",
+    "timestamp": "2021-11-11T09:00:00.000Z",
+    "id": 3
   },
   {
-    name: "Buy more eggs",
-    timestamp: "2021-11-11T13:00:00.141Z",
-    id: 4
+    "name": "Buy more eggs",
+    "timestamp": "2021-11-11T13:00:00.000Z",
+    "id": 4
   }
 ]
 
